@@ -20,7 +20,7 @@ pipeline{
 
 def checkout_api_tests_repo(){
     echo "Checking out code from api-tests-final repository."
-    sh "git 'https://github.com/linamalteniece/api-tests-final.git'"
+    git 'https://github.com/linamalteniece/api-tests-final.git'
 
 }
 
