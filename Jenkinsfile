@@ -3,7 +3,8 @@ pipeline{
     triggers {
         pollSCM('*/1 * * * *')
     }
-    stage('checkout-repo') {
+    stages{
+        stage('checkout-repo') {
             steps {
                 checkout_api_tests_repo()
             }
@@ -14,6 +15,7 @@ pipeline{
                 build_docker_image()
             }
         }
+    }
 }
 
 def checkout_api_tests_repo(){
